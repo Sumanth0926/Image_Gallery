@@ -30,10 +30,188 @@ Validate the HTML and CSS code
 Publish the website in the given URL.
 
 ## PROGRAM
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rolls-Royce Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #3a3a3a);
+      color: #fff;
+    }
 
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #c0a062;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #c0a062;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightboxContent {
+      text-align: center;
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    #lightboxImage {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 10px;
+      border: 3px solid #c0a062;
+      box-shadow: 0 0 20px #c0a062;
+    }
+
+    .close-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #ff4d4d;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .close-button:hover {
+      background: #e60000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+  </style>
+  <script>
+    function displayLightbox(src, alt) {
+      document.getElementById("lightboxImage").src = src;
+      document.getElementById("lightboxImage").alt = alt;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function hideLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>ROLLS-ROYCE SHOWCASE</h1>
+    <p>Experience the elegance of Phantom, Ghost, and Cullinan</p>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item" onclick="displayLightbox('rolls-phantom.jpg', 'Rolls-Royce Phantom')">
+      <img src="rolls-phantom.jpg" alt="Rolls-Royce Phantom">
+      <div class="caption">Rolls-Royce Phantom</div>
+    </div>
+    <div class="gallery-item" onclick="displayLightbox('rolls-ghost.jpg', 'Rolls-Royce Ghost')">
+      <img src="rolls-ghost.jpg" alt="Rolls-Royce Ghost">
+      <div class="caption">Rolls-Royce Ghost</div>
+    </div>
+    <div class="gallery-item" onclick="displayLightbox('rolls-cullinan.jpg', 'Rolls-Royce Cullinan')">
+      <img src="rolls-cullinan.jpg" alt="Rolls-Royce Cullinan">
+      <div class="caption">Rolls-Royce Cullinan</div>
+    </div>
+  </div>
+
+  <div id="lightbox">
+    <div id="lightboxContent">
+      <img id="lightboxImage" src="" alt="">
+      <br>
+      <button class="close-button" onclick="hideLightbox()">Close</button>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+```
 
 ## OUTPUT
+![alt text](image.png)
 
+![alt text](image-1.png)
 
+![alt text](image-2.png)
 ## RESULT
   The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
