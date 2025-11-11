@@ -208,13 +208,14 @@ Publish the website in the given URL.
 ```
 
 ## OUTPUT
-![WhatsApp Image 2025-11-09 at 23 37 35_15834526](https://github.com/user-attachments/assets/12ebf791-9811-42f4-ab6b-42e468516934)
 
+![alt text](<Screenshot 2025-11-12 005122.png>)
+![alt text](<Screenshot 2025-11-12 005328.png>)
+![alt text](<Screenshot 2025-11-12 005630.png>)
+![alt text](<Screenshot 2025-11-12 005812.png>)
+![alt text](<Screenshot 2025-11-12 005931.png>)
+![alt text](<Screenshot 2025-11-12 010039.png>)
 
-![WhatsApp Image 2025-11-09 at 23 37 47_e69a74e2](https://github.com/user-attachments/assets/23ca2543-ec17-46d1-b762-9f4178fbd11e)
-
-
-![WhatsApp Image 2025-11-09 at 23 38 05_72a16efc](https://github.com/user-attachments/assets/fb7e5be0-0244-48b6-861c-35c6b559b748)
 
 ## RESULT
   The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
